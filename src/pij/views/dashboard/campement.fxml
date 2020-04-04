@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="pij.controller.CampementController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.CampementController">
    <children>
-      <Label layoutX="193.0" layoutY="164.0" text="Campement">
-         <font>
-            <Font size="51.0" />
-         </font>
-      </Label>
+      <JFXButton fx:id="ajouter_C" layoutX="198.0" layoutY="153.0" onAction="#ajouter_C" text="Ajouter" />
+      <JFXButton fx:id="modifier_C" layoutX="198.0" layoutY="187.0" onAction="#modifier_C" text="Modifier" />
+      <JFXButton fx:id="supprimer_C" layoutX="198.0" layoutY="224.0" onAction="#supprimer_C" text="Supprimer" />
+      <TableView fx:id="table_C" layoutX="487.0" layoutY="124.0" prefHeight="200.0" prefWidth="443.0">
+        <columns>
+          <TableColumn fx:id="libelle" prefWidth="136.0" text="Libelle" />
+          <TableColumn fx:id="adresse" prefWidth="168.0" text="adresse" />
+            <TableColumn fx:id="capacity" prefWidth="138.0" text="Capacité" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

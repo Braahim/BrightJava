@@ -5,8 +5,10 @@
  */
 package pij.controller;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -15,6 +17,9 @@ import javafx.fxml.Initializable;
  * @author Brahim
  */
 public class DonController implements Initializable {
+
+
+ 
 
     /**
      * Initializes the controller class.

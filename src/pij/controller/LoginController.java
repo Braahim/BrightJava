@@ -69,7 +69,8 @@ public class LoginController implements Initializable {
             rs=stat.executeQuery();
             if (rs.next()){
                 lbletat.setText("Connecté!");
-                    
+                Stage current = (Stage) button.getScene().getWindow();
+                current.close();
                 
                 Stage stage =new Stage();
                  Parent root = FXMLLoader.load(getClass().getResource("/pij/views/Dashboard.fxml"));
