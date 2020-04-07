@@ -5,37 +5,44 @@
  */
 package pij.services;
 
-import pij.utils.connectionDB;
-import pij.entities.Campement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Logger;
+import pij.entities.Campement;
+import pij.entities.Refugie;
+import pij.utils.connectionDB;
 
 /**
  *
  * @author Brahim
  */
-public class campCrud {
-    Connection cn2;
+public class refugieCrud {
+        Connection cn2;
     Statement st;
 
-    public campCrud() {
+    public refugieCrud() {
         cn2 =connectionDB.getInstance().getCnx();
     }
     
-    public int addCampement(Campement c) {
+    public int addRefugie(Refugie c) {
         int st = 0;
         try {
             PreparedStatement pst;
             String requete2;
-            requete2 = "INSERT INTO camp (libelle, location, capacity)VALUES (?,?,?)";
+            requete2 = "INSERT INTO refuge (nom, prenom, nationalite, img, BirthD, birthLoc, sexe, socialSit)VALUES (?,?,?,?,?,?,?,?,?)";
             pst = cn2.prepareStatement(requete2);
 
-            pst.setString(1, c.getLibelle());
-            pst.setString(2, c.getLocation());
-            pst.setInt(3, c.getCapacity());
+            pst.setString(1, c.getNom());
+            pst.setString(2, c.getPrenom());
+            pst.setString(3, c.getNationality());
+            pst.setString(4, c.getImg());
+            pst.setDate(5, (Date) c.getBirthD());
+            pst.setString(6, c.getBirthLoc());
+            pst.setString(7, c.getSexe());
+            pst.setString(8, c.getSocialSit());
             st = pst.executeUpdate();
             //cn2.close();
 
@@ -45,7 +52,7 @@ public class campCrud {
         }
         return st;
     }
-        public int deleteCampement(String libelle) {
+        public int deleteRefugie(String libelle) {
         
             int st = 0;
             try {
@@ -80,5 +87,4 @@ public class campCrud {
     return st;
     
 }
-    
 }

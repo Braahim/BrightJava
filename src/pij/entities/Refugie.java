@@ -18,7 +18,7 @@ public class Refugie {
     private String nationality;
     private String img;
     private String addDate;
-    private String birthD;
+    private Date birthD;
     private String birthLoc;
     private String sexe;
     private String socialSit;
@@ -29,7 +29,7 @@ public class Refugie {
     public Refugie() {
         
     }
-    public Refugie(String nom, String prenom, String nationality, String img, String birthD, String birthLoc, String sexe) {
+    public Refugie(String nom, String prenom, String nationality, String img, Date birthD, String birthLoc, String sexe) {
         
         this.nom = nom;
         this.prenom = prenom;
@@ -83,11 +83,11 @@ public class Refugie {
         this.addDate = addDate;
     }
 
-    public String getBirthD() {
+    public Date getBirthD() {
         return birthD;
     }
 
-    public void setBirthD(String birthD) {
+    public void setBirthD(Date birthD) {
         this.birthD = birthD;
     }
 
