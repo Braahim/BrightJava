@@ -7,8 +7,8 @@
     </information>
     <update check="always"/>
     <resources>
-        <j2se version="10+" href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="PiJ.jar" size="67383" download="eager"/>
+        <j2se version="10.0.2+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="PiJ.jar" size="67386" download="eager"/>
         <jar href="lib\GNAvatarView-1.0-rc.jar" size="26082" download="eager"/>
         <jar href="lib\GNButton-1.1.0.jar" size="194323" download="eager"/>
         <jar href="lib\GNCalendar-1.0-alpha.jar" size="11402" download="eager"/>
