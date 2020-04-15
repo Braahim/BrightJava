@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PiJ.jnlp">
   <information>
@@ -31,3 +32,34 @@
   <jfx:javafx-desc  width="800" height="600" main-class="pij.PiJ"  name="PiJ" />
   <update check="always"/>
 </jnlp>
+=======
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PiJ.jnlp">
+    <information>
+        <title>PiJ</title>
+        <vendor>Brahim</vendor>
+        <description>null</description>
+        <offline-allowed/>
+    </information>
+    <update check="always"/>
+    <resources>
+        <j2se version="10+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="PiJ.jar" size="67383" download="eager"/>
+        <jar href="lib\GNAvatarView-1.0-rc.jar" size="26082" download="eager"/>
+        <jar href="lib\GNButton-1.1.0.jar" size="194323" download="eager"/>
+        <jar href="lib\GNCalendar-1.0-alpha.jar" size="11402" download="eager"/>
+        <jar href="lib\GNCarousel-2.1.5.jar" size="530460" download="eager"/>
+        <jar href="lib\GNDecorator-2.1.2-alpha.jar" size="2869249" download="eager"/>
+        <jar href="lib\animatefx-1.2.0.jar" size="85592" download="eager"/>
+        <jar href="lib\colors-1.4.jar" size="32122" download="eager"/>
+        <jar href="lib\com.mysql.jdbc_5.1.5.jar" size="676712" download="eager"/>
+        <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager"/>
+        <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager"/>
+        <jar href="lib\jfoenix-9.0.8.jar" size="2419463" download="eager"/>
+        <jar href="lib\mysql-connector-java-5.1.48.jar" size="1006956" download="eager"/>
+        <jar href="lib\scenicView.jar" size="524264" download="eager"/>
+        <jar href="lib\tilesfx-1.5.2.jar" size="1365796" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="800" height="600" main-class="pij.PiJ" name="PiJ"/>
+</jnlp>
+
+>>>>>>> shaima

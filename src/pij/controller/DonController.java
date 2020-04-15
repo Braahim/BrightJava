@@ -5,6 +5,7 @@
  */
 package pij.controller;
 
+<<<<<<< HEAD
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -380,4 +381,25 @@ document.add(po);
   
   
    
+=======
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+
+/**
+ * FXML Controller class
+ *
+ * @author Brahim
+ */
+public class DonController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+    
+>>>>>>> shaima
 }

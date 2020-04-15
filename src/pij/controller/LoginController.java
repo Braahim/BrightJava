@@ -27,7 +27,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import pij.utils.MyConnection;
+=======
+import pij.utils.connectionDB;
+>>>>>>> shaima
 
 /**
  * FXML Controller class
@@ -36,7 +40,12 @@ import pij.utils.MyConnection;
  */
 public class LoginController implements Initializable {
 
+<<<<<<< HEAD
     Connection con=MyConnection.getInstance().getCnx();
+=======
+    
+    Connection con=connectionDB.getInstance().getCnx();
+>>>>>>> shaima
     @FXML
     private JFXTextField txtF;
     @FXML
@@ -51,7 +60,11 @@ public class LoginController implements Initializable {
     /**
      * Initializes the controller class.
      */
+<<<<<<< HEAD
    /* @Override
+=======
+    @Override
+>>>>>>> shaima
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
@@ -92,6 +105,7 @@ public class LoginController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
+<<<<<<< HEAD
     }*/
        @FXML
    public void loginn (ActionEvent event )throws SQLException {
@@ -133,4 +147,8 @@ PreparedStatement stat =null;
         
     } 
 
+=======
+    }
+    
+>>>>>>> shaima
 }

@@ -62,18 +62,32 @@ public class DashboardController implements Initializable {
     {
         pnl_scroll.getChildren().clear();
         
+<<<<<<< HEAD
         Node [] nodes = new  Node[1];
         
       
             try {
                 nodes[0] = (Node)FXMLLoader.load(getClass().getResource(node));
                pnl_scroll.getChildren().add(nodes[0]);
+=======
+        Node [] nodes = new  Node[15];
+        
+        for(int i = 0; i<10; i++)
+        {
+            try {
+                nodes[i] = (Node)FXMLLoader.load(getClass().getResource(node));
+               pnl_scroll.getChildren().add(nodes[i]);
+>>>>>>> shaima
                 
             } catch (IOException ex) {
                 Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
             }
            
+<<<<<<< HEAD
         
+=======
+        }  
+>>>>>>> shaima
     }
 
 

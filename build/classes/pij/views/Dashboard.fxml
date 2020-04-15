@@ -25,7 +25,11 @@
          <children>
             <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1062.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
+<<<<<<< HEAD
                   <Label layoutX="224.0" layoutY="47.0" text="Stock Manager" textFill="WHITE">
+=======
+                  <Label layoutX="224.0" layoutY="47.0" text="Nom Admin" textFill="WHITE">
+>>>>>>> shaima
                      <font>
                         <Font size="36.0" />
                      </font>
