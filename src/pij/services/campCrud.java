@@ -9,9 +9,13 @@ import pij.utils.connectionDB;
 import pij.entities.Campement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Logger;
+import pij.utils.JSON_Reader;
 
 /**
  *
@@ -20,6 +24,7 @@ import java.util.logging.Logger;
 public class campCrud {
     Connection cn2;
     Statement st;
+    JSON_Reader jsonR = new JSON_Reader();
 
     public campCrud() {
         cn2 =connectionDB.getInstance().getCnx();
@@ -30,16 +35,18 @@ public class campCrud {
         try {
             PreparedStatement pst;
             String requete2;
-            requete2 = "INSERT INTO camp (libelle, location, capacity)VALUES (?,?,?)";
+            requete2 = "INSERT INTO camp (libelle, location, capacity, lat, lng)VALUES (?,?,?,?,?)";
             pst = cn2.prepareStatement(requete2);
 
             pst.setString(1, c.getLibelle());
             pst.setString(2, c.getLocation());
             pst.setInt(3, c.getCapacity());
+            pst.setString(4, c.getLat());
+            pst.setString(5, c.getLng());
             st = pst.executeUpdate();
             //cn2.close();
 
-            pst.executeUpdate();
+           // pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger("erreur dans l'ajout compement"+ex.getMessage());
         }
@@ -80,5 +87,18 @@ public class campCrud {
     return st;
     
 }
-    
+        public Campement getCamp(String lib) throws SQLException{
+           String query = "select * from camp where libelle  LIKE?";  
+           List camps = new LinkedList();
+          
+            PreparedStatement ps = cn2.prepareStatement(query);
+            ps.setString(1,lib);
+            ResultSet rs = ps.executeQuery();
+while (rs.next()){
+       Campement c = new Campement();
+       camps.add(new Campement(rs.getString("libelle"), rs.getString("location"),rs.getInt("capacity"), rs.getString("lat"), rs.getString("lng")));
+}
+ps.close();
+return (Campement) camps.get(0);
+}
 }

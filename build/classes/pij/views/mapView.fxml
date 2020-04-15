@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="319.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.MapViewController">
+   <children>
+      <ImageView fitHeight="429.0" fitWidth="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background_Campement1.jpg" />
+         </image>
+      </ImageView>
+      <JFXListView fx:id="campList" layoutX="140.0" layoutY="39.0" onMouseClicked="#get_data" opacity="0.57" prefHeight="305.0" prefWidth="77.0" style="-fx-border-color: black;" />
+      <WebView fx:id="webview" layoutX="217.0" layoutY="39.0" prefHeight="305.0" prefWidth="230.0" />
+   </children>
+</AnchorPane>

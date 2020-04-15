@@ -4,5 +4,6 @@
 
 .head-background
 {
-    -fx-background-color: linear-gradient(to left,#795AF3 ,#3929E0);
+    -fx-background-color: rgb(18,164,187);
+    -fx-background: linear-gradient(90deg, rgba(18,164,187,1) 0%, rgba(0,168,255,1) 13%, rgba(9,121,99,0.9279061966583508) 100%);
 }

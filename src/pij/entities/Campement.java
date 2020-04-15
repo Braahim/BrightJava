@@ -15,13 +15,32 @@ public class Campement {
     private String libelle;
     private String location;
     private int capacity;
+    private String lat;
+    private String lng;
 
-    public Campement(String libelle, String location, int capacity) {
+    public Campement(String libelle, String location, int capacity, String lat, String lng) {
         
         this.libelle = libelle;
         this.location = location;
         this.capacity = capacity;
+        this.lat = lat;
+        this.lng = lng;
     }
+
+    public Campement(String libelle) {
+        this.libelle = libelle;
+    }
+
+    public Campement() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String toString() {
+        return "Campement{" + "libelle=" + libelle + ", location=" + location + ", capacity=" + capacity + ", lat=" + lat + ", lng=" + lng + '}';
+    }
+
+
 
 
 
@@ -47,6 +66,22 @@ public class Campement {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
     }
 }
 

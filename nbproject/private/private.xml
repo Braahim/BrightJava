@@ -4,18 +4,25 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/css/dashboard.css</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/mapView.fxml</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/login.fxml</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/ressources/tn.json</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/entities/Campement.java</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/webmaps.html</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/utils/JSON_Reader.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/CampementController.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/LoginController.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/services/campCrud.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/AssociationController.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/PiJ.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/DonController.java</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/ressources/governorates.json</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/Dashboard.fxml</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/nbproject/jfx-impl.xml</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/css/table.css</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/dashboard/association.fxml</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/views/dashboard/campement.fxml</file>
+            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/MapViewController.java</file>
             <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/BrightJava/src/pij/controller/DashboardController.java</file>
         </group>
     </open-files>

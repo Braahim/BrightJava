@@ -84,7 +84,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void click_association(ActionEvent event) {
-         refreshNodes("/pij/views/dashboard/association.fxml");
+         refreshNodes("/pij/views/mapView.fxml");
     }
 
     @FXML
