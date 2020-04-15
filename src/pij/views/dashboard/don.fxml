@@ -1,15 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="pij.controller.DonController">
+<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="1007.0" style="-fx-background-color: #e9eea5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pij.controller.DonController">
    <children>
-      <Label layoutX="193.0" layoutY="164.0" text="Don">
+      <Label layoutX="14.0" layoutY="101.0" prefHeight="17.0" prefWidth="48.0" text="Libelle:" textFill="#520dd0">
          <font>
-            <Font size="51.0" />
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="134.0" prefHeight="17.0" prefWidth="99.0" text="Quantite:" textFill="#520dd0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="167.0" text="Date:" textFill="#520dd0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="200.0" text="Stock:" textFill="#520dd0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+      <Label layoutX="10.0" layoutY="238.0" />
+      <TextField fx:id="tritre" layoutX="79.0" layoutY="101.0" prefHeight="25.0" prefWidth="149.0" promptText="Libelle...!" />
+      <TextField fx:id="tville" layoutX="79.0" layoutY="131.0" promptText="Quantite...!" />
+      <Button fx:id="bAjouter" layoutX="64.0" layoutY="247.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="42.0" prefWidth="140.0" text="  Add" textFill="#09b94f">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font></Button>
+      <TableView fx:id="table" layoutX="459.0" layoutY="216.0" onMouseClicked="#SelectItemes" prefHeight="248.0" prefWidth="444.0" style="-fx-background-color: #91a771;">
+         <columns>
+            <TableColumn fx:id="col_iduser" minWidth="0.0" prefWidth="0.0" text="iduser" />
+            <TableColumn fx:id="col_libelle" prefWidth="97.0" text="Libelle" />
+            <TableColumn fx:id="col_quantite" prefWidth="99.0" text="Quantite" />
+            <TableColumn fx:id="col_date" prefWidth="109.0" text="Date" />
+            <TableColumn fx:id="col_stock" prefWidth="138.0" text="Stock" />
+         </columns>
+      </TableView>
+      <Button layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#modifier" prefHeight="42.0" prefWidth="140.0" text="Update" textFill="#270cd7">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="171.0" layoutY="341.0" mnemonicParsing="false" onAction="#supp" prefHeight="42.0" prefWidth="130.0" text="Delete" textFill="#f50707">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="459.0" layoutY="184.0" mnemonicParsing="false" onAction="#afficher" prefHeight="31.0" prefWidth="444.0" text="File" textFill="#b008f8">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font></Button>
+      <Label fx:id="labelnom" layoutX="241.0" layoutY="105.0" prefHeight="17.0" prefWidth="140.0" />
+      <Label fx:id="labeldescription" layoutX="241.0" layoutY="135.0" prefHeight="17.0" prefWidth="130.0" />
+      <Label fx:id="labeldatedebut" layoutX="230.0" layoutY="168.0" prefHeight="17.0" prefWidth="219.0" />
+      <Label fx:id="labeldatefin" layoutX="241.0" layoutY="201.0" prefHeight="17.0" prefWidth="140.0" />
+      <Label layoutX="288.0" layoutY="14.0" text="Liste des Dons" textFill="#e186df">
+         <font>
+            <Font name="Bell MT" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="80.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/more.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="20.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="179.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/trash.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="616.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_Share_64px.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="338.0" layoutY="340.0" mnemonicParsing="false" onAction="#vider" prefHeight="42.0" prefWidth="83.0" text="Vider">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelu" layoutX="495.0" layoutY="148.0" prefHeight="33.0" prefWidth="305.0" textFill="#f20a0a">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="Cmatiere" layoutX="75.0" layoutY="197.0" prefHeight="25.0" prefWidth="155.0" />
+      <DatePicker fx:id="dated" layoutX="80.0" layoutY="164.0" prefHeight="25.0" prefWidth="149.0" promptText="YYYY-MM-DD" />
+      <TextField fx:id="search" layoutX="542.0" layoutY="110.0" onKeyPressed="#recherche" promptText="rechercher........!" />
+      <Button layoutX="767.0" layoutY="25.0" mnemonicParsing="false" onAction="#convertirEnPdf" prefHeight="43.0" prefWidth="140.0" text="        PDF " textFill="#ff0b0b">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font></Button>
+      <ImageView fitHeight="42.0" fitWidth="33.0" layoutX="784.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pdf-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="377.0" layoutY="113.0" prefHeight="18.0" prefWidth="155.0" text="Recherche par Libelle:" textFill="#520dd0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
          </font>
       </Label>
    </children>

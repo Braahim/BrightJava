@@ -27,7 +27,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import pij.utils.connectionDB;
+import pij.utils.MyConnection;
 
 /**
  * FXML Controller class
@@ -36,8 +36,7 @@ import pij.utils.connectionDB;
  */
 public class LoginController implements Initializable {
 
-    
-    Connection con=connectionDB.getInstance().getCnx();
+    Connection con=MyConnection.getInstance().getCnx();
     @FXML
     private JFXTextField txtF;
     @FXML
@@ -52,7 +51,7 @@ public class LoginController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @Override
+   /* @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
@@ -93,6 +92,45 @@ public class LoginController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }*/
+       @FXML
+   public void loginn (ActionEvent event )throws SQLException {
+PreparedStatement stat =null;
+        ResultSet rs = null;
+        String sql ="SELECT * FROM users WHERE name=? AND password =?";
+        try{
+            stat=con.prepareStatement(sql);
+            stat.setString(1, txtF.getText().toString());
+            stat.setString(2, passF.getText().toString());
+            rs=stat.executeQuery();
+            if (rs.next()){
+                lbletat.setText("Connecté!");
+                Stage stage =new Stage();
+                 Parent root = FXMLLoader.load(getClass().getResource("/pij/views/Front.fxml"));
+                 Scene scene = new Scene(root);
+                 stage.setScene(scene);
+               
+                stage.setTitle("Home");
+                stage.show();
+                
+            }else {
+                lbletat.setText("Non connecté!");
+                Alert alert= new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Erreur");
+                alert.setTitle("Alert");
+                alert.setContentText("Username ou password sont incorrect");
+            alert.showAndWait();
+            }
+            
+        }catch (SQLException e){
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
+    @Override
+    public void initialize(URL location,ResourceBundle resources){
+        
+    } 
+
 }

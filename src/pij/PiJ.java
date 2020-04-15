@@ -16,7 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import pij.utils.connectionDB;
+import pij.utils.MyConnection;
 
 
 /**
@@ -27,7 +27,7 @@ public class PiJ extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-       connectionDB c = connectionDB.getInstance() ; 
+       MyConnection c = MyConnection.getInstance() ; 
 
       //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/login.fxml"));
        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/login.fxml"));

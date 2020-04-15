@@ -3,16 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/utils/connectionDB.java</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/PiJ.java</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/views/images/logo.png</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/controller/RefugeeController.java</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/controller/LoginController.java</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/controller/DashboardController.java</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/views/Dashboard.fxml</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/views/login.fxml</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/views/css/dashboard.css</file>
-            <file>file:/C:/Users/mehdi/Documents/NetBeansProjects/PiJ/src/pij/views/dashboard/refugee.fxml</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/controller/StockController.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/views/dashboard/stock.fxml</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/controller/LoginController.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/PiJ.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/entity/stock_crud.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/views/login.fxml</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/BrightJava-master/src/pij/utils/MyConnection.java</file>
         </group>
     </open-files>
 </project-private>
